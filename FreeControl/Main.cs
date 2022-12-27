@@ -88,10 +88,10 @@ namespace FreeControl
                 Directory.CreateDirectory(UserDataPath);
                 if (!File.Exists(fullPath))
                 {
-                    File.WriteAllText(fullPath, JsonHelper.json(tempData));
+                    File.WriteAllText(fullPath, Json.Serialize(tempData));
                 }
                 StreamReader reader = File.OpenText(fullPath);
-                tempData = JsonHelper.jsonDes<Setting>(reader.ReadToEnd());
+                tempData = Json.Deserialize<Setting>(reader.ReadToEnd());
                 reader.Close();
                 return tempData;
             }
@@ -111,7 +111,7 @@ namespace FreeControl
             {
                 var fullPath = Path.Combine(UserDataPath, "config.json");
                 Directory.CreateDirectory(UserDataPath);
-                File.WriteAllText(fullPath, JsonHelper.json(userData));
+                File.WriteAllText(fullPath, Json.Serialize(userData));
             }
             catch (Exception ex)
             {
@@ -807,6 +807,11 @@ namespace FreeControl
             shortcut.ShowDialog();
         }
         #endregion
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

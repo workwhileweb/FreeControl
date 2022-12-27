@@ -57,6 +57,7 @@
             this.updownWidth = new Sunny.UI.UIIntegerUpDown();
             this.updownHeight = new Sunny.UI.UIIntegerUpDown();
             this.cbxOtherSetting = new Sunny.UI.UIGroupBox();
+            this.cbxControllerEnabled = new Sunny.UI.UICheckBox();
             this.cbxShowTouches = new Sunny.UI.UICheckBox();
             this.cbxTopMost = new Sunny.UI.UICheckBox();
             this.cbxReadOnly = new Sunny.UI.UICheckBox();
@@ -71,7 +72,6 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnClose = new Sunny.UI.UIButton();
             this.btnMini = new Sunny.UI.UIButton();
-            this.cbxControllerEnabled = new Sunny.UI.UICheckBox();
             this.navTab.SuspendLayout();
             this.tabHome.SuspendLayout();
             this.tabSetting.SuspendLayout();
@@ -90,7 +90,7 @@
             this.ledTitle.IntervalH = 0;
             this.ledTitle.IntervalV = 0;
             this.ledTitle.LedBackColor = System.Drawing.Color.Transparent;
-            this.ledTitle.Location = new System.Drawing.Point(13, 22);
+            this.ledTitle.Location = new System.Drawing.Point(13, 35);
             this.ledTitle.Name = "ledTitle";
             this.ledTitle.Size = new System.Drawing.Size(222, 24);
             this.ledTitle.TabIndex = 0;
@@ -98,6 +98,7 @@
             // 
             // navImgList
             // 
+            this.navImgList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             this.navImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("navImgList.ImageStream")));
             this.navImgList.TransparentColor = System.Drawing.Color.Transparent;
             this.navImgList.Images.SetKeyName(0, "Home.png");
@@ -111,7 +112,7 @@
             this.navTab.Controls.Add(this.tabHome);
             this.navTab.Controls.Add(this.tabSetting);
             this.navTab.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.navTab.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.navTab.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.navTab.ImageList = this.navImgList;
             this.navTab.ItemSize = new System.Drawing.Size(50, 50);
             this.navTab.Location = new System.Drawing.Point(0, 63);
@@ -126,6 +127,7 @@
             this.navTab.TabIndex = 6;
             this.navTab.TabSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.navTab.TabUnSelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.navTab.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // tabHome
             // 
@@ -148,48 +150,47 @@
             // 
             this.linkIssues.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.linkIssues.AutoSize = true;
-            this.linkIssues.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkIssues.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.linkIssues.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkIssues.LinkArea = new System.Windows.Forms.LinkArea(0, 12);
             this.linkIssues.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkIssues.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.linkIssues.Location = new System.Drawing.Point(360, 200);
             this.linkIssues.Name = "linkIssues";
-            this.linkIssues.Size = new System.Drawing.Size(40, 21);
+            this.linkIssues.Size = new System.Drawing.Size(37, 21);
             this.linkIssues.Style = Sunny.UI.UIStyle.Custom;
             this.linkIssues.TabIndex = 27;
             this.linkIssues.TabStop = true;
             this.linkIssues.Text = "issues";
             this.linkIssues.UseCompatibleTextRendering = true;
             this.linkIssues.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.linkIssues.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.linkIssues.Click += new System.EventHandler(this.linkIssues_Click);
             // 
             // tbxPort
             // 
             this.tbxPort.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxPort.FillColor = System.Drawing.Color.White;
-            this.tbxPort.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.tbxPort.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbxPort.Location = new System.Drawing.Point(363, 229);
             this.tbxPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbxPort.Maximum = 2147483647D;
-            this.tbxPort.Minimum = -2147483648D;
             this.tbxPort.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxPort.Name = "tbxPort";
             this.tbxPort.Padding = new System.Windows.Forms.Padding(5);
             this.tbxPort.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.tbxPort.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.tbxPort.ShowText = false;
             this.tbxPort.Size = new System.Drawing.Size(67, 27);
             this.tbxPort.Style = Sunny.UI.UIStyle.Custom;
             this.tbxPort.StyleCustomMode = true;
             this.tbxPort.TabIndex = 26;
             this.tbxPort.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbxPort.Watermark = "端口号";
+            this.tbxPort.Watermark = "port";
+            this.tbxPort.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // cbxUseWireless
             // 
             this.cbxUseWireless.CheckBoxColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.cbxUseWireless.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxUseWireless.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.cbxUseWireless.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbxUseWireless.Location = new System.Drawing.Point(118, 229);
             this.cbxUseWireless.MinimumSize = new System.Drawing.Size(1, 1);
             this.cbxUseWireless.Name = "cbxUseWireless";
@@ -197,82 +198,83 @@
             this.cbxUseWireless.Size = new System.Drawing.Size(85, 29);
             this.cbxUseWireless.Style = Sunny.UI.UIStyle.Custom;
             this.cbxUseWireless.TabIndex = 25;
-            this.cbxUseWireless.Text = "无线访问";
+            this.cbxUseWireless.Text = "wireless ";
+            this.cbxUseWireless.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // tbxAddress
             // 
             this.tbxAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbxAddress.FillColor = System.Drawing.Color.White;
-            this.tbxAddress.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.tbxAddress.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbxAddress.Location = new System.Drawing.Point(210, 229);
             this.tbxAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbxAddress.Maximum = 2147483647D;
-            this.tbxAddress.Minimum = -2147483648D;
             this.tbxAddress.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbxAddress.Name = "tbxAddress";
             this.tbxAddress.Padding = new System.Windows.Forms.Padding(5);
             this.tbxAddress.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.tbxAddress.RectDisableColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.tbxAddress.ShowText = false;
             this.tbxAddress.Size = new System.Drawing.Size(145, 27);
             this.tbxAddress.Style = Sunny.UI.UIStyle.Custom;
             this.tbxAddress.StyleCustomMode = true;
             this.tbxAddress.TabIndex = 24;
             this.tbxAddress.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.tbxAddress.Watermark = "输入IP地址";
+            this.tbxAddress.Watermark = "IP address";
+            this.tbxAddress.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // linkSetPort
             // 
             this.linkSetPort.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.linkSetPort.AutoSize = true;
-            this.linkSetPort.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkSetPort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.linkSetPort.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkSetPort.LinkArea = new System.Windows.Forms.LinkArea(0, 12);
             this.linkSetPort.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkSetPort.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.linkSetPort.Location = new System.Drawing.Point(359, 181);
             this.linkSetPort.Name = "linkSetPort";
-            this.linkSetPort.Size = new System.Drawing.Size(66, 21);
+            this.linkSetPort.Size = new System.Drawing.Size(93, 21);
             this.linkSetPort.Style = Sunny.UI.UIStyle.Custom;
             this.linkSetPort.TabIndex = 4;
             this.linkSetPort.TabStop = true;
-            this.linkSetPort.Text = "设置端口号";
+            this.linkSetPort.Text = "set port number";
             this.linkSetPort.UseCompatibleTextRendering = true;
             this.linkSetPort.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.linkSetPort.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.linkSetPort.Click += new System.EventHandler(this.linkSetPort_Click);
             // 
             // linkEnabledADB
             // 
             this.linkEnabledADB.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(155)))), ((int)(((byte)(40)))));
             this.linkEnabledADB.AutoSize = true;
-            this.linkEnabledADB.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.linkEnabledADB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.linkEnabledADB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkEnabledADB.LinkArea = new System.Windows.Forms.LinkArea(0, 12);
             this.linkEnabledADB.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkEnabledADB.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.linkEnabledADB.Location = new System.Drawing.Point(282, 81);
             this.linkEnabledADB.Name = "linkEnabledADB";
-            this.linkEnabledADB.Size = new System.Drawing.Size(124, 17);
+            this.linkEnabledADB.Size = new System.Drawing.Size(180, 21);
             this.linkEnabledADB.Style = Sunny.UI.UIStyle.Custom;
             this.linkEnabledADB.TabIndex = 2;
             this.linkEnabledADB.TabStop = true;
-            this.linkEnabledADB.Text = "(开启USB调试的方法)";
+            this.linkEnabledADB.Text = "(How to enable USB debugging)";
+            this.linkEnabledADB.UseCompatibleTextRendering = true;
             this.linkEnabledADB.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.linkEnabledADB.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.linkEnabledADB.Click += new System.EventHandler(this.linkEnabledADB_Click);
             // 
             // uiLabel1
             // 
             this.uiLabel1.AutoSize = true;
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.uiLabel1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
             this.uiLabel1.Location = new System.Drawing.Point(142, 78);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(232, 140);
+            this.uiLabel1.Size = new System.Drawing.Size(463, 133);
             this.uiLabel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel1.StyleCustomMode = true;
             this.uiLabel1.TabIndex = 1;
-            this.uiLabel1.Text = "1、开启USB调试模式\r\n2、使用数据线将手机连接到电脑上\r\n3、点击启动按钮\r\n\r\n无线访问失败请确认IP地址是否正确\r\n若IP地址正确仍无法使用，请尝试\r\n若" +
-    "以上操作后仍无法使用，请提交";
+            this.uiLabel1.Text = resources.GetString("uiLabel1.Text");
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // btnStart
             // 
@@ -280,7 +282,7 @@
             this.btnStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(40)))), ((int)(((byte)(70)))));
             this.btnStart.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(233)))), ((int)(((byte)(255)))));
             this.btnStart.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.btnStart.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnStart.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnStart.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnStart.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.btnStart.Location = new System.Drawing.Point(203, 19);
@@ -294,7 +296,9 @@
             this.btnStart.Style = Sunny.UI.UIStyle.Custom;
             this.btnStart.Symbol = 61671;
             this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "启动";
+            this.btnStart.Text = "start";
+            this.btnStart.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // tabSetting
             // 
@@ -319,20 +323,22 @@
             // 
             // uiLabel6
             // 
-            this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel6.Location = new System.Drawing.Point(402, 11);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(87, 29);
             this.uiLabel6.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel6.TabIndex = 32;
-            this.uiLabel6.Text = "分辨率";
+            this.uiLabel6.Text = "Resolution";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel6.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // comboPx
             // 
+            this.comboPx.DataSource = null;
             this.comboPx.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboPx.FillColor = System.Drawing.Color.White;
-            this.comboPx.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.comboPx.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboPx.Items.AddRange(new object[] {
             "默认",
             "1920",
@@ -348,25 +354,29 @@
             this.comboPx.Size = new System.Drawing.Size(99, 29);
             this.comboPx.Style = Sunny.UI.UIStyle.Custom;
             this.comboPx.TabIndex = 31;
-            this.comboPx.Text = "分辨率";
+            this.comboPx.Text = "Resolution";
             this.comboPx.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboPx.Watermark = "";
+            this.comboPx.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel5
             // 
-            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel5.Location = new System.Drawing.Point(402, 50);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(87, 29);
             this.uiLabel5.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel5.TabIndex = 30;
-            this.uiLabel5.Text = "比特率";
+            this.uiLabel5.Text = "bit rate";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel5.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // comboMbps
             // 
+            this.comboMbps.DataSource = null;
             this.comboMbps.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboMbps.FillColor = System.Drawing.Color.White;
-            this.comboMbps.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.comboMbps.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboMbps.Items.AddRange(new object[] {
             "默认",
             "64Mbps",
@@ -382,27 +392,31 @@
             this.comboMbps.Size = new System.Drawing.Size(99, 29);
             this.comboMbps.Style = Sunny.UI.UIStyle.Custom;
             this.comboMbps.TabIndex = 29;
-            this.comboMbps.Text = "比特率";
+            this.comboMbps.Text = "bit rate";
             this.comboMbps.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboMbps.Watermark = "";
+            this.comboMbps.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel2
             // 
-            this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel2.Location = new System.Drawing.Point(402, 89);
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(87, 29);
             this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel2.TabIndex = 28;
-            this.uiLabel2.Text = "帧数限制";
+            this.uiLabel2.Text = "frame limit";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel2.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // comboMaxFPS
             // 
+            this.comboMaxFPS.DataSource = null;
             this.comboMaxFPS.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.comboMaxFPS.FillColor = System.Drawing.Color.White;
-            this.comboMaxFPS.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.comboMaxFPS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboMaxFPS.Items.AddRange(new object[] {
-            "默认",
+            "default",
             "144",
             "120",
             "90",
@@ -416,15 +430,16 @@
             this.comboMaxFPS.Size = new System.Drawing.Size(99, 29);
             this.comboMaxFPS.Style = Sunny.UI.UIStyle.Custom;
             this.comboMaxFPS.TabIndex = 27;
-            this.comboMaxFPS.Text = "帧数限制";
             this.comboMaxFPS.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboMaxFPS.Watermark = "";
+            this.comboMaxFPS.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // rbtnShortcuts
             // 
             this.rbtnShortcuts.BackColor = System.Drawing.Color.Transparent;
             this.rbtnShortcuts.Controls.Add(this.lbAllShortcut);
             this.rbtnShortcuts.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
-            this.rbtnShortcuts.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.rbtnShortcuts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rbtnShortcuts.Items.AddRange(new object[] {
             "Ctrl",
             "Ctrl + Alt",
@@ -440,22 +455,24 @@
             this.rbtnShortcuts.Size = new System.Drawing.Size(190, 114);
             this.rbtnShortcuts.Style = Sunny.UI.UIStyle.Custom;
             this.rbtnShortcuts.TabIndex = 25;
-            this.rbtnShortcuts.Text = "快捷键（                ）";
+            this.rbtnShortcuts.Text = "hot key（                ）";
             this.rbtnShortcuts.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbtnShortcuts.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // lbAllShortcut
             // 
             this.lbAllShortcut.AutoSize = true;
             this.lbAllShortcut.BackColor = System.Drawing.Color.Transparent;
             this.lbAllShortcut.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbAllShortcut.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbAllShortcut.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbAllShortcut.Location = new System.Drawing.Point(70, 6);
             this.lbAllShortcut.Name = "lbAllShortcut";
-            this.lbAllShortcut.Size = new System.Drawing.Size(69, 20);
+            this.lbAllShortcut.Size = new System.Drawing.Size(59, 20);
             this.lbAllShortcut.Style = Sunny.UI.UIStyle.Custom;
             this.lbAllShortcut.TabIndex = 24;
-            this.lbAllShortcut.Text = "查看全部";
+            this.lbAllShortcut.Text = "view all";
             this.lbAllShortcut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAllShortcut.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.lbAllShortcut.Click += new System.EventHandler(this.lbAllShortcut_Click);
             // 
             // uiGroupBox1
@@ -465,7 +482,7 @@
             this.uiGroupBox1.Controls.Add(this.updownWidth);
             this.uiGroupBox1.Controls.Add(this.updownHeight);
             this.uiGroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
-            this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.uiGroupBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiGroupBox1.Location = new System.Drawing.Point(9, 5);
             this.uiGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
@@ -475,64 +492,75 @@
             this.uiGroupBox1.Size = new System.Drawing.Size(190, 114);
             this.uiGroupBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiGroupBox1.TabIndex = 22;
-            this.uiGroupBox1.Text = "窗口大小";
+            this.uiGroupBox1.Text = "window size";
             this.uiGroupBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiGroupBox1.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel4
             // 
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel4.Location = new System.Drawing.Point(10, 35);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(46, 23);
             this.uiLabel4.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel4.TabIndex = 3;
-            this.uiLabel4.Text = "高度";
+            this.uiLabel4.Text = "high";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel4.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // uiLabel3
             // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.uiLabel3.Location = new System.Drawing.Point(10, 74);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(46, 23);
             this.uiLabel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel3.TabIndex = 2;
-            this.uiLabel3.Text = "宽度";
+            this.uiLabel3.Text = "width";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel3.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // updownWidth
             // 
-            this.updownWidth.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.updownWidth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.updownWidth.HasMaximum = true;
             this.updownWidth.HasMinimum = true;
             this.updownWidth.Location = new System.Drawing.Point(60, 73);
             this.updownWidth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updownWidth.Maximum = 5555;
+            this.updownWidth.MaximumEnabled = true;
             this.updownWidth.Minimum = 0;
+            this.updownWidth.MinimumEnabled = true;
             this.updownWidth.MinimumSize = new System.Drawing.Size(100, 0);
             this.updownWidth.Name = "updownWidth";
+            this.updownWidth.ShowText = false;
             this.updownWidth.Size = new System.Drawing.Size(116, 29);
             this.updownWidth.Style = Sunny.UI.UIStyle.Custom;
             this.updownWidth.TabIndex = 1;
             this.updownWidth.Text = "uiIntegerUpDown2";
             this.updownWidth.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.updownWidth.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // updownHeight
             // 
-            this.updownHeight.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.updownHeight.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.updownHeight.HasMaximum = true;
             this.updownHeight.HasMinimum = true;
             this.updownHeight.Location = new System.Drawing.Point(60, 34);
             this.updownHeight.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.updownHeight.Maximum = 5555;
+            this.updownHeight.MaximumEnabled = true;
             this.updownHeight.Minimum = 0;
+            this.updownHeight.MinimumEnabled = true;
             this.updownHeight.MinimumSize = new System.Drawing.Size(100, 0);
             this.updownHeight.Name = "updownHeight";
+            this.updownHeight.ShowText = false;
             this.updownHeight.Size = new System.Drawing.Size(116, 29);
             this.updownHeight.Style = Sunny.UI.UIStyle.Custom;
             this.updownHeight.TabIndex = 0;
             this.updownHeight.Text = "uiIntegerUpDown1";
             this.updownHeight.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.updownHeight.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // cbxOtherSetting
             // 
@@ -546,8 +574,8 @@
             this.cbxOtherSetting.Controls.Add(this.cbxKeepAwake);
             this.cbxOtherSetting.Controls.Add(this.cbxCloseScreen);
             this.cbxOtherSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
-            this.cbxOtherSetting.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxOtherSetting.Location = new System.Drawing.Point(9, 129);
+            this.cbxOtherSetting.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxOtherSetting.Location = new System.Drawing.Point(9, 130);
             this.cbxOtherSetting.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxOtherSetting.MinimumSize = new System.Drawing.Size(1, 1);
             this.cbxOtherSetting.Name = "cbxOtherSetting";
@@ -556,190 +584,14 @@
             this.cbxOtherSetting.Size = new System.Drawing.Size(586, 110);
             this.cbxOtherSetting.Style = Sunny.UI.UIStyle.Custom;
             this.cbxOtherSetting.TabIndex = 3;
-            this.cbxOtherSetting.Text = "其他设置";
+            this.cbxOtherSetting.Text = "other settings";
             this.cbxOtherSetting.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbxShowTouches
-            // 
-            this.cbxShowTouches.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxShowTouches.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxShowTouches.Location = new System.Drawing.Point(443, 35);
-            this.cbxShowTouches.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxShowTouches.Name = "cbxShowTouches";
-            this.cbxShowTouches.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxShowTouches.Size = new System.Drawing.Size(102, 29);
-            this.cbxShowTouches.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxShowTouches.TabIndex = 8;
-            this.cbxShowTouches.Text = "显示触摸";
-            // 
-            // cbxTopMost
-            // 
-            this.cbxTopMost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxTopMost.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxTopMost.Location = new System.Drawing.Point(119, 67);
-            this.cbxTopMost.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxTopMost.Name = "cbxTopMost";
-            this.cbxTopMost.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxTopMost.Size = new System.Drawing.Size(102, 29);
-            this.cbxTopMost.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxTopMost.TabIndex = 6;
-            this.cbxTopMost.Text = "窗口置顶";
-            // 
-            // cbxReadOnly
-            // 
-            this.cbxReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxReadOnly.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxReadOnly.Location = new System.Drawing.Point(227, 67);
-            this.cbxReadOnly.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxReadOnly.Name = "cbxReadOnly";
-            this.cbxReadOnly.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxReadOnly.Size = new System.Drawing.Size(102, 29);
-            this.cbxReadOnly.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxReadOnly.TabIndex = 7;
-            this.cbxReadOnly.Text = "只读模式";
-            // 
-            // cbxFullScreen
-            // 
-            this.cbxFullScreen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxFullScreen.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxFullScreen.Location = new System.Drawing.Point(11, 67);
-            this.cbxFullScreen.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxFullScreen.Name = "cbxFullScreen";
-            this.cbxFullScreen.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxFullScreen.Size = new System.Drawing.Size(102, 29);
-            this.cbxFullScreen.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxFullScreen.TabIndex = 5;
-            this.cbxFullScreen.Text = "全屏显示";
-            // 
-            // cbxHideBorder
-            // 
-            this.cbxHideBorder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxHideBorder.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxHideBorder.Location = new System.Drawing.Point(335, 35);
-            this.cbxHideBorder.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxHideBorder.Name = "cbxHideBorder";
-            this.cbxHideBorder.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxHideBorder.Size = new System.Drawing.Size(102, 29);
-            this.cbxHideBorder.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxHideBorder.TabIndex = 4;
-            this.cbxHideBorder.Text = "隐藏边框";
-            // 
-            // cbxUseLog
-            // 
-            this.cbxUseLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxUseLog.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxUseLog.Location = new System.Drawing.Point(227, 35);
-            this.cbxUseLog.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxUseLog.Name = "cbxUseLog";
-            this.cbxUseLog.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxUseLog.Size = new System.Drawing.Size(102, 29);
-            this.cbxUseLog.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxUseLog.TabIndex = 3;
-            this.cbxUseLog.Text = "程序日志";
-            // 
-            // cbxKeepAwake
-            // 
-            this.cbxKeepAwake.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxKeepAwake.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxKeepAwake.Location = new System.Drawing.Point(119, 35);
-            this.cbxKeepAwake.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxKeepAwake.Name = "cbxKeepAwake";
-            this.cbxKeepAwake.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxKeepAwake.Size = new System.Drawing.Size(102, 29);
-            this.cbxKeepAwake.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxKeepAwake.TabIndex = 1;
-            this.cbxKeepAwake.Text = "保持唤醒";
-            // 
-            // cbxCloseScreen
-            // 
-            this.cbxCloseScreen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxCloseScreen.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxCloseScreen.Location = new System.Drawing.Point(11, 35);
-            this.cbxCloseScreen.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxCloseScreen.Name = "cbxCloseScreen";
-            this.cbxCloseScreen.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxCloseScreen.Size = new System.Drawing.Size(102, 29);
-            this.cbxCloseScreen.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxCloseScreen.TabIndex = 0;
-            this.cbxCloseScreen.Text = "关闭屏幕";
-            // 
-            // uDarkMode
-            // 
-            this.uDarkMode.AutoSize = true;
-            this.uDarkMode.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.uDarkMode.Location = new System.Drawing.Point(435, 248);
-            this.uDarkMode.Name = "uDarkMode";
-            this.uDarkMode.Size = new System.Drawing.Size(69, 20);
-            this.uDarkMode.Style = Sunny.UI.UIStyle.Custom;
-            this.uDarkMode.TabIndex = 16;
-            this.uDarkMode.Text = "深色模式";
-            this.uDarkMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // switchDarkMode
-            // 
-            this.switchDarkMode.ActiveText = "ON";
-            this.switchDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.switchDarkMode.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.switchDarkMode.InActiveText = "OFF";
-            this.switchDarkMode.Location = new System.Drawing.Point(515, 245);
-            this.switchDarkMode.MinimumSize = new System.Drawing.Size(1, 1);
-            this.switchDarkMode.Name = "switchDarkMode";
-            this.switchDarkMode.Size = new System.Drawing.Size(75, 29);
-            this.switchDarkMode.Style = Sunny.UI.UIStyle.Custom;
-            this.switchDarkMode.TabIndex = 17;
-            // 
-            // cbxAllFPS
-            // 
-            this.cbxAllFPS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxAllFPS.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.cbxAllFPS.Location = new System.Drawing.Point(216, 246);
-            this.cbxAllFPS.MinimumSize = new System.Drawing.Size(1, 1);
-            this.cbxAllFPS.Name = "cbxAllFPS";
-            this.cbxAllFPS.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.cbxAllFPS.Size = new System.Drawing.Size(92, 29);
-            this.cbxAllFPS.Style = Sunny.UI.UIStyle.Custom;
-            this.cbxAllFPS.TabIndex = 2;
-            this.cbxAllFPS.Text = "全帧渲染";
-            this.cbxAllFPS.Visible = false;
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("微软雅黑", 21.75F);
-            this.lbTitle.Location = new System.Drawing.Point(280, 19);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(187, 38);
-            this.lbTitle.TabIndex = 8;
-            this.lbTitle.Text = "Free Control";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnClose.Location = new System.Drawing.Point(611, 15);
-            this.btnClose.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 35);
-            this.btnClose.Style = Sunny.UI.UIStyle.Custom;
-            this.btnClose.TabIndex = 9;
-            this.btnClose.Text = "×";
-            // 
-            // btnMini
-            // 
-            this.btnMini.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMini.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMini.Location = new System.Drawing.Point(570, 15);
-            this.btnMini.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnMini.Name = "btnMini";
-            this.btnMini.Size = new System.Drawing.Size(35, 35);
-            this.btnMini.Style = Sunny.UI.UIStyle.Custom;
-            this.btnMini.TabIndex = 10;
-            this.btnMini.Text = "-";
+            this.cbxOtherSetting.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // cbxControllerEnabled
             // 
             this.cbxControllerEnabled.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxControllerEnabled.Font = new System.Drawing.Font("微软雅黑", 11F);
+            this.cbxControllerEnabled.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbxControllerEnabled.Location = new System.Drawing.Point(335, 70);
             this.cbxControllerEnabled.MinimumSize = new System.Drawing.Size(1, 1);
             this.cbxControllerEnabled.Name = "cbxControllerEnabled";
@@ -747,7 +599,198 @@
             this.cbxControllerEnabled.Size = new System.Drawing.Size(102, 29);
             this.cbxControllerEnabled.Style = Sunny.UI.UIStyle.Custom;
             this.cbxControllerEnabled.TabIndex = 9;
-            this.cbxControllerEnabled.Text = "启用控制器";
+            this.cbxControllerEnabled.Text = "enable controller";
+            this.cbxControllerEnabled.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxShowTouches
+            // 
+            this.cbxShowTouches.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxShowTouches.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxShowTouches.Location = new System.Drawing.Point(443, 35);
+            this.cbxShowTouches.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxShowTouches.Name = "cbxShowTouches";
+            this.cbxShowTouches.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxShowTouches.Size = new System.Drawing.Size(102, 29);
+            this.cbxShowTouches.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxShowTouches.TabIndex = 8;
+            this.cbxShowTouches.Text = "show touch";
+            this.cbxShowTouches.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxTopMost
+            // 
+            this.cbxTopMost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxTopMost.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxTopMost.Location = new System.Drawing.Point(119, 67);
+            this.cbxTopMost.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxTopMost.Name = "cbxTopMost";
+            this.cbxTopMost.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxTopMost.Size = new System.Drawing.Size(102, 29);
+            this.cbxTopMost.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxTopMost.TabIndex = 6;
+            this.cbxTopMost.Text = "on top";
+            this.cbxTopMost.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxReadOnly
+            // 
+            this.cbxReadOnly.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxReadOnly.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxReadOnly.Location = new System.Drawing.Point(227, 67);
+            this.cbxReadOnly.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxReadOnly.Name = "cbxReadOnly";
+            this.cbxReadOnly.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxReadOnly.Size = new System.Drawing.Size(102, 29);
+            this.cbxReadOnly.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxReadOnly.TabIndex = 7;
+            this.cbxReadOnly.Text = "read-only mode";
+            this.cbxReadOnly.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxFullScreen
+            // 
+            this.cbxFullScreen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxFullScreen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxFullScreen.Location = new System.Drawing.Point(11, 67);
+            this.cbxFullScreen.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxFullScreen.Name = "cbxFullScreen";
+            this.cbxFullScreen.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxFullScreen.Size = new System.Drawing.Size(102, 29);
+            this.cbxFullScreen.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxFullScreen.TabIndex = 5;
+            this.cbxFullScreen.Text = "full-screen display";
+            this.cbxFullScreen.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxHideBorder
+            // 
+            this.cbxHideBorder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxHideBorder.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxHideBorder.Location = new System.Drawing.Point(335, 35);
+            this.cbxHideBorder.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxHideBorder.Name = "cbxHideBorder";
+            this.cbxHideBorder.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxHideBorder.Size = new System.Drawing.Size(102, 29);
+            this.cbxHideBorder.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxHideBorder.TabIndex = 4;
+            this.cbxHideBorder.Text = "hide border";
+            this.cbxHideBorder.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxUseLog
+            // 
+            this.cbxUseLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxUseLog.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxUseLog.Location = new System.Drawing.Point(227, 35);
+            this.cbxUseLog.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxUseLog.Name = "cbxUseLog";
+            this.cbxUseLog.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxUseLog.Size = new System.Drawing.Size(102, 29);
+            this.cbxUseLog.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxUseLog.TabIndex = 3;
+            this.cbxUseLog.Text = "log";
+            this.cbxUseLog.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxKeepAwake
+            // 
+            this.cbxKeepAwake.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxKeepAwake.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxKeepAwake.Location = new System.Drawing.Point(119, 35);
+            this.cbxKeepAwake.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxKeepAwake.Name = "cbxKeepAwake";
+            this.cbxKeepAwake.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxKeepAwake.Size = new System.Drawing.Size(102, 29);
+            this.cbxKeepAwake.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxKeepAwake.TabIndex = 1;
+            this.cbxKeepAwake.Text = "stay awake";
+            this.cbxKeepAwake.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxCloseScreen
+            // 
+            this.cbxCloseScreen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxCloseScreen.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxCloseScreen.Location = new System.Drawing.Point(11, 35);
+            this.cbxCloseScreen.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxCloseScreen.Name = "cbxCloseScreen";
+            this.cbxCloseScreen.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxCloseScreen.Size = new System.Drawing.Size(102, 29);
+            this.cbxCloseScreen.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxCloseScreen.TabIndex = 0;
+            this.cbxCloseScreen.Text = "turn off the screen";
+            this.cbxCloseScreen.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // uDarkMode
+            // 
+            this.uDarkMode.AutoSize = true;
+            this.uDarkMode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.uDarkMode.Location = new System.Drawing.Point(435, 248);
+            this.uDarkMode.Name = "uDarkMode";
+            this.uDarkMode.Size = new System.Drawing.Size(81, 20);
+            this.uDarkMode.Style = Sunny.UI.UIStyle.Custom;
+            this.uDarkMode.TabIndex = 16;
+            this.uDarkMode.Text = "dark mode";
+            this.uDarkMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uDarkMode.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // switchDarkMode
+            // 
+            this.switchDarkMode.ActiveText = "ON";
+            this.switchDarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.switchDarkMode.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.switchDarkMode.InActiveText = "OFF";
+            this.switchDarkMode.Location = new System.Drawing.Point(515, 245);
+            this.switchDarkMode.MinimumSize = new System.Drawing.Size(1, 1);
+            this.switchDarkMode.Name = "switchDarkMode";
+            this.switchDarkMode.Size = new System.Drawing.Size(75, 29);
+            this.switchDarkMode.Style = Sunny.UI.UIStyle.Custom;
+            this.switchDarkMode.TabIndex = 17;
+            this.switchDarkMode.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // cbxAllFPS
+            // 
+            this.cbxAllFPS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxAllFPS.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbxAllFPS.Location = new System.Drawing.Point(216, 246);
+            this.cbxAllFPS.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cbxAllFPS.Name = "cbxAllFPS";
+            this.cbxAllFPS.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.cbxAllFPS.Size = new System.Drawing.Size(131, 29);
+            this.cbxAllFPS.Style = Sunny.UI.UIStyle.Custom;
+            this.cbxAllFPS.TabIndex = 2;
+            this.cbxAllFPS.Text = "full frame rendering";
+            this.cbxAllFPS.Visible = false;
+            this.cbxAllFPS.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbTitle.Location = new System.Drawing.Point(280, 35);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(174, 40);
+            this.lbTitle.TabIndex = 8;
+            this.lbTitle.Text = "Free Control";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClose.Location = new System.Drawing.Point(611, 35);
+            this.btnClose.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.Style = Sunny.UI.UIStyle.Custom;
+            this.btnClose.TabIndex = 9;
+            this.btnClose.Text = "×";
+            this.btnClose.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
+            // 
+            // btnMini
+            // 
+            this.btnMini.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMini.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMini.Location = new System.Drawing.Point(570, 35);
+            this.btnMini.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnMini.Name = "btnMini";
+            this.btnMini.Size = new System.Drawing.Size(35, 35);
+            this.btnMini.Style = Sunny.UI.UIStyle.Custom;
+            this.btnMini.TabIndex = 10;
+            this.btnMini.Text = "-";
+            this.btnMini.ZoomScaleRect = new System.Drawing.Rectangle(0, 0, 0, 0);
             // 
             // Main
             // 
@@ -767,11 +810,11 @@
             this.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.ShowRect = false;
             this.ShowTitle = false;
-            this.ShowTitleIcon = true;
             this.Style = Sunny.UI.UIStyle.Custom;
             this.Text = "";
             this.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.TitleHeight = 63;
+            this.ZoomScaleRect = new System.Drawing.Rectangle(15, 15, 658, 340);
             this.navTab.ResumeLayout(false);
             this.tabHome.ResumeLayout(false);
             this.tabHome.PerformLayout();
